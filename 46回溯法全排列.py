@@ -40,9 +40,9 @@ class Solution:
 
     
     def helper(self, choice, path):
-     ## 注意这一行的copy很重要，因为是回溯法，操作的都是同一数组的引用，如果不copy最后添加到res的都是空数组
+     ## 注意这一行的[:]很重要，因为是回溯法，操作的都是同一数组的引用，如果不[:]最后添加到res的都是空数组
      ## 可以取消注释下面一行试试
-        if choice == []: self.res.append(path.copy())
+        if choice == []: self.res.append(path[:])
         #if choice == []: self.res.append(path)
         for index, i in enumerate(choice):
             
